@@ -57,6 +57,7 @@ And finally, to list all the services:
 docker stack ps api
 ```
 
+### Credits
 A lot of this code used https://github.com/mlabouardy/alb-go as a basis, and followed the corresponding tutorial https://hackernoon.com/architecting-a-highly-scalable-golang-api-with-docker-swarm-traefik-875d1871cc1f.
 https://www.upcloud.com/support/how-to-configure-docker-swarm/ was quite informative too, so I've used a lot of that advice too.
 Things went wrong, so https://forums.docker.com/t/cannot-connect-to-the-docker-daemon-is-the-docker-daemon-running-on-this-host/8925 helped a bit too
