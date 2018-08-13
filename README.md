@@ -1,5 +1,7 @@
 # Hive Docker Swarm
 ## Prerequisites
+Make sure Docker is fully installed - my installation had docker supplementry files but I had to run ``` brew cask install docker``` to fix it.
+
 To create a Swarm cluster: 
 Use the shell script (setup-swarm.sh) to setup a cluster with 3 nodes (1 Manager & 2 Workers)
 
@@ -21,10 +23,19 @@ At this moment, we have 3 nodes.
 
 ## Stage 2
 
+Run ```docker swarm init``` or ```docker swarm join``` to initialise the swarm
+
 In order to deploy our stack, we should execute the following command:
 ```
-docker stack deploy — compose-file docker-compose.yml api
+docker stack deploy --compose-file docker-compose.yml api
 ```
+
+However, we may encounter this error: 
+```
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+```
+Make sure that docker is running! Took a while to track it down. 
+
 
 To check the overlay network:
 ```
@@ -47,3 +58,5 @@ docker stack ps api
 ```
 
 A lot of this code used https://github.com/mlabouardy/alb-go as a basis, and followed the corresponding tutorial https://hackernoon.com/architecting-a-highly-scalable-golang-api-with-docker-swarm-traefik-875d1871cc1f.
+https://www.upcloud.com/support/how-to-configure-docker-swarm/ was quite informative too, so I've used a lot of that advice too.
+Things went wrong, so https://forums.docker.com/t/cannot-connect-to-the-docker-daemon-is-the-docker-daemon-running-on-this-host/8925 helped a bit too
