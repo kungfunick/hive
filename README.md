@@ -8,6 +8,8 @@ Issue the following command to execute the script:
 chmod +x setup-swarm.sh
 ./setup-swarm.sh
 ```
+
+## Current Status
 At this moment, we have 3 nodes. 
 
 * We use an overlay network named traefik-net, on which we add the services we want to expose to Traefik.
