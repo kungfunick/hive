@@ -3,8 +3,8 @@ Use the shell script (setup-swarm.sh) to setup a cluster with 3 nodes (1 Manager
 
 Issue the following command to execute the script:
 ```
-chmod +x setup.sh
-./setup.sh
+chmod +x setup-swarm.sh
+./setup-swarm.sh
 ```
 At this moment, we have 3 nodes. 
 
