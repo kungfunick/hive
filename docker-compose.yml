@@ -18,8 +18,8 @@ services:
         constraints:
           - node.role == manager
 
-  books:
-    image: mlabouardy/books-api
+  swarm:
+    image: resin/rpi-raspbian/
     networks:
       - traefik-net
     deploy:
@@ -29,20 +29,7 @@ services:
       labels:
         - "traefik.port=5000"
         - "traefik.backend=books"
-        - "traefik.frontend.rule=Path:/books"
-
-  movies:
-    image: mlabouardy/movies-api
-    networks:
-      - traefik-net
-    deploy:
-      placement:
-        constraints:
-          - node.role == worker
-      labels:
-        - "traefik.port=5000"
-        - "traefik.backend=movies"
-        - "traefik.frontend.rule=Path:/movies"
+        - "traefik.frontend.rule=Path:/swarm"
 
 networks:
   traefik-net:
