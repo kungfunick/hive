@@ -1,4 +1,6 @@
 # Hive Docker Swarm
+First, I wanted to use highly concurrent and highly safe system so I found RUST(https://en.wikipedia.org/wiki/Rust_(programming_language) to handle docker swarm deployment. Later, I plan to turn each swarn node into a automated task engine (spun up on fly  by master or destroyed), and link it to Swarm, which will handle the AI of the clustered network.
+
 ## Prerequisites
 Make sure Docker is fully installed - my installation had docker supplementry files but I had to run ``` brew cask install docker``` to fix it.
 
