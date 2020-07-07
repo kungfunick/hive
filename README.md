@@ -36,7 +36,7 @@ However, we may encounter this error:
 ```
 Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
 ```
-Make sure that docker is running! Took a while to track it down. 
+Make sure that docker is running!  
 
 
 To check the overlay network:
